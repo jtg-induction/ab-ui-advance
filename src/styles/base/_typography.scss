@@ -38,3 +38,37 @@ html {
 * {
   font-family: $font-roboto, sans-serif;
 }
+
+h1 {
+  @include font(3.2rem, 700, 3.6rem, 0.09rem);
+  @include breakpoint($tablet-min) {
+    @include font(4.8rem, 700, 5.2rem, 0.14rem);
+  }
+  @include breakpoint($desktop-sm-min) {
+    @include font(5.2rem, 700, 5.5rem, 0.14rem);
+  }
+  @include breakpoint($desktop-lg-min) {
+    @include font(5.6rem, 700, 6rem, 0.15rem);
+  }
+}
+p {
+  &.para-lg {
+    @include font(1.6rem, $height: 2.1rem);
+    @include breakpoint($tablet-min) {
+      @include font(1.7rem, $height: 2.5rem);
+    }
+    @include breakpoint($desktop-sm-min) {
+      @include font(2rem, $height: 2.6rem);
+    }
+  }
+}
+.font-schedule {
+  @include font(1.2rem, $height: 1.7rem);
+  font-family: $font-halvetica;
+  @include breakpoint($tablet-min) {
+    @include font(1.3rem, $height: 1.9rem);
+  }
+  @include breakpoint($desktop-sm-min) {
+    @include font(1.3rem, $height: 2rem);
+  }
+}
