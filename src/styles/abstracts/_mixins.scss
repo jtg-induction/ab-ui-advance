@@ -1,0 +1,31 @@
+@mixin flex(
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $direction: row,
+  $flex: 0 1 auto
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex: $flex;
+}
+@mixin font($size: inherit, $wt: normal, $height: normal, $spacing: normal) {
+  font-size: $size;
+  font-weight: $wt;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+@mixin line-clamp($no-of-lines) {
+  overflow: hidden;
+  -moz-text-align-last: justify;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $no-of-lines;
+  -webkit-box-orient: vertical;
+}
+@mixin breakpoint($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
