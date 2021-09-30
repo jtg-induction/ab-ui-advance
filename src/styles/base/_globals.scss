@@ -16,3 +16,15 @@ ul {
 button {
   cursor: pointer;
 }
+.container {
+  margin: 0 auto;
+  @include breakpoint($tablet-min) {
+    max-width: $tablet-min;
+  }
+  @include breakpoint($desktop-sm-min) {
+    max-width: $desktop-sm-min;
+  }
+  @include breakpoint($desktop-lg-min) {
+    max-width: $desktop-lg-min;
+  }
+}

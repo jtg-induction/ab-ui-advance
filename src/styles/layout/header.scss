@@ -1,0 +1,84 @@
+.navbar {
+  @include flex(space-between, center);
+  padding: 1.17rem 2rem;
+  background: $white;
+
+  &__logo {
+    width: 9.6rem;
+    height: 3.6rem;
+  }
+  &__menu {
+    display: none;
+  }
+  .show-nav {
+    @include flex($direction: column);
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    z-index: 4;
+    &:after {
+      background-color: $navmenu-bg-color;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      right: -100%;
+      bottom: -100vh;
+      z-index: -1;
+    }
+
+    .navbar__item {
+      line-height: 6rem;
+      border-bottom: 0.07rem solid $border-color;
+      width: 100%;
+    }
+  }
+  &__link {
+    @include font(1.4rem, 800, 1.6rem);
+    color: $grey;
+    max-width: 70rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__hamburger {
+    @include font(3rem);
+    cursor: pointer;
+  }
+  @include breakpoint($tablet-min) {
+    padding: 1.5rem 3rem;
+    &__logo {
+      width: 10.8rem;
+      height: 4rem;
+    }
+    &__hamburger {
+      @include font(4rem);
+    }
+    .show-nav {
+      top: 8rem;
+      max-width: 70rem;
+    }
+    &__link {
+      max-width: 20rem;
+    }
+  }
+
+  @include breakpoint($desktop-sm-min) {
+    padding: 2rem 4rem;
+    .hide-contact {
+      display: none;
+    }
+    &__menu {
+      @include flex($align-items: center);
+    }
+    &__item {
+      margin-left: 3.3rem;
+    }
+    &__hamburger {
+      display: none;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    padding: 2rem 11.7rem;
+  }
+}

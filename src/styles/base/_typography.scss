@@ -1,40 +1,40 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Thin.ttf");
   font-weight: 100;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
   font-weight: 300;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
   font-weight: 500;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");
   font-weight: 700;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
   font-weight: 900;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: $font-roboto;
   src: url("../assets/fonts/Roboto/Roboto-Black.ttf");
   font-weight: 900;
 }
 @font-face {
-  font-family: "Halvetica Neue";
+  font-family: $font-halvetica;
   src: url("../assets/fonts/Helvetica-Neue-Font/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf");
 }
 html {
   font-size: 62.5%;
 }
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-roboto, sans-serif;
 }
