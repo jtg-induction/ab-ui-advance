@@ -61,6 +61,18 @@ p {
       @include font(2rem, $height: 2.6rem);
     }
   }
+  &.para-lg-var-1 {
+    @include font(1.6rem, $height: 2rem);
+    @include breakpoint($desktop-sm-min) {
+      @include font(1.7rem, $height: 2.3rem);
+    }
+  }
+  &.para-sm {
+    @include font(1.3rem, $height: 1.8rem);
+    @include breakpoint($tablet-min) {
+      @include font(1.4rem, $height: 1.9rem);
+    }
+  }
 }
 .font-schedule {
   @include font(1.2rem, $height: 1.7rem);
@@ -70,5 +82,29 @@ p {
   }
   @include breakpoint($desktop-sm-min) {
     @include font(1.3rem, $height: 2rem);
+  }
+}
+h2 {
+  @include font(2.3rem, 700, $height: 2.7rem);
+  @include breakpoint($tablet-min) {
+    @include font(2.6rem, 700, $height: 2.8rem);
+  }
+  @include breakpoint($desktop-sm-min) {
+    @include font(3rem, 700, $height: 3.4rem);
+  }
+  @include breakpoint($desktop-lg-min) {
+    @include font(3.8rem, 700, $height: 4rem);
+  }
+}
+h3 {
+  @include font(1.5rem, 700, $height: 1.9rem);
+  @include breakpoint($tablet-min) {
+    @include font(1.6rem, 700, $height: 1.8rem);
+  }
+  @include breakpoint($desktop-sm-min) {
+    @include font(1.6rem, 700, $height: 2rem);
+  }
+  @include breakpoint($desktop-lg-min) {
+    @include font(2rem, 700, $height: 2.4rem);
   }
 }

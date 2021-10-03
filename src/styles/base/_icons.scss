@@ -79,3 +79,16 @@
 .icon-cross:before {
   content: "\64";
 }
+.icon-slanting {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3.4rem;
+    width: 0.8rem;
+    border: 0.2rem solid $white;
+    top: 0.5rem;
+    left: 0.6rem;
+    transform: skew(155deg);
+  }
+}

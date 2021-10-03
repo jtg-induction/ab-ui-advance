@@ -6,5 +6,9 @@
 // 2. Base stuff
 @import "base/globals", "base/icons", "base/typography", "base/utilities";
 
+//4. Components
+@import "components/question-card.scss";
+
 // 3. Layout-related sections
-@import "layout/header.scss", "layout/hero-section.scss";
+@import "layout/header.scss", "layout/hero-section.scss",
+  "layout/question-section.scss";
