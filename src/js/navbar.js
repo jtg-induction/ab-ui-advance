@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".navbar__hamburger");
 const navMenu = document.querySelector(".navbar__menu");
 const navLink = document.querySelectorAll(".navbar__link");
+const body = document.querySelector("body");
 
 const swapIcons = () => {
   hamburger.classList.toggle("icon-hamburgur");
@@ -9,11 +10,13 @@ const swapIcons = () => {
 
 const mobileMenu = () => {
   navMenu.classList.toggle("show-nav");
+  body.classList.toggle("disable-scroll");
   swapIcons();
 };
 
 const closeMenu = () => {
   navMenu.classList.remove("show-nav");
+  body.classList.remove("disable-scroll");
   swapIcons();
 };
 
@@ -25,6 +28,7 @@ navLink.forEach((n) => n.addEventListener("click", closeMenu));
     let myWidth = window.innerWidth;
     if (navMenu.classList.contains("show-nav") && myWidth > 1024) {
       navMenu.classList.remove("show-nav");
+      body.classList.remove("disable-scroll");
       swapIcons();
     }
   };
