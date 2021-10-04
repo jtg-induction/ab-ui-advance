@@ -1,0 +1,146 @@
+.footer {
+  background: linear-gradient(90deg, $orange 18%, $light-orange 100%);
+  &__container {
+    padding: 2.5rem 1.7rem;
+  }
+  &__lists {
+    @include flex;
+    margin-bottom: 1.9rem;
+  }
+  &__logos {
+    margin-bottom: 1.6rem;
+  }
+  &__logo-company {
+    margin-bottom: 1rem;
+    max-width: 7.5rem;
+  }
+  &__logos-social {
+    @include flex($align-items: center);
+    margin-bottom: 1.3rem;
+  }
+  &__logo-social {
+    @include font(2.7rem);
+    margin-right: 1.6rem;
+  }
+  &__logo-social:last-of-type {
+    margin-right: 0;
+  }
+
+  &__list {
+    @include font(1.2rem, $wt: 700, $spacing: 0.12rem);
+    margin-right: 4rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &-item {
+      margin-bottom: 2.4rem;
+    }
+    &-item:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__copyright {
+    @include font(0.9rem, $spacing: 0.04rem);
+    color: $black;
+    position: relative;
+  }
+  &__anchor {
+    &-logo {
+      color: $white;
+    }
+    &-text {
+      color: $black;
+    }
+  }
+
+  @include breakpoint($tablet-min) {
+    &__container {
+      padding: 3.1rem 3rem 0.8rem;
+    }
+    &__upper {
+      @include flex(space-between);
+    }
+    &__lists {
+      padding-right: 0.8rem;
+    }
+    &__logos {
+      margin-bottom: 0.8rem;
+    }
+    &__logo-company {
+      max-width: 10rem;
+      margin-bottom: 1.9rem;
+    }
+    &__logos-social {
+      margin-top: 1.5rem;
+    }
+    &__logo-social {
+      margin-right: 1.4rem;
+    }
+    &__list {
+      margin-right: 5.8rem;
+      &-item {
+        margin-bottom: 2.3rem;
+      }
+    }
+    &__copyright {
+      @include font(1rem);
+      letter-spacing: 0.139rem;
+      top: -3rem;
+    }
+  }
+  @include breakpoint($desktop-sm-min) {
+    &__container {
+      padding: 2.9rem 4.1rem;
+    }
+    &__lists {
+      padding-top: 0.7rem;
+    }
+    &__logos {
+      padding-top: 0.3rem;
+    }
+    &__logo-company {
+      max-width: 11rem;
+      margin-bottom: 1.6rem;
+    }
+    &__logos-social {
+      margin-bottom: 1.4rem;
+    }
+    &__logo-social {
+      @include font(2.9rem);
+      margin-right: 1.9rem;
+    }
+    &__list {
+      margin-right: 8.9rem;
+      &-item {
+        margin-bottom: 2rem;
+      }
+    }
+    &__copyright {
+      @include font(1.1rem);
+      letter-spacing: 0.145rem;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    &__container {
+      padding: 4.2rem 11.7rem;
+    }
+    &__lists {
+      padding: 0 0.7rem 0;
+    }
+    &__logos {
+      padding-top: 0;
+    }
+    &__logos-social {
+      margin-bottom: 1.6rem;
+    }
+    &__list {
+      padding-top: 0.2rem;
+      &-item {
+        margin-bottom: 2.1rem;
+      }
+    }
+    &__copyright {
+      @include font(1.2rem, $wt: 500, $spacing: 0.05rem);
+    }
+  }
+}

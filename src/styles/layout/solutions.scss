@@ -1,0 +1,198 @@
+.solutions {
+  background-color: $white-preset-2;
+  &__content {
+    padding: 4.5rem 2rem 3.6rem;
+  }
+  &__text {
+    margin-bottom: 2.6rem;
+    &-rignet {
+      margin-bottom: 0.4rem;
+    }
+    &-heading {
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.03rem;
+    }
+    &-details {
+      @include line-clamp(7);
+      margin-bottom: 2.3rem;
+      letter-spacing: 0.03rem;
+    }
+    .icon-slanting {
+      &::before {
+        display: none;
+      }
+    }
+    &-learn-more {
+      @include flex(flex-start, center, $direction: row);
+      @include font(1rem, 700);
+      font-family: $font-halvetica;
+      color: $orange;
+    }
+    &-angle-right {
+      @include font(1.5rem);
+      margin-left: 1.8rem;
+    }
+  }
+  @include breakpoint($tablet-min) {
+    &__content {
+      @include flex(center, flex-start);
+      padding: 4.5rem 3rem 2.9rem;
+    }
+    &__text {
+      max-width: 21rem;
+      margin: 2.2rem 3rem 0 0;
+      font-family: $font-halvetica;
+      &-rignet {
+        margin-bottom: 0.5rem;
+      }
+      &-heading {
+        margin-bottom: 1.1rem;
+      }
+      &-details {
+        margin-bottom: 3.3rem;
+      }
+      &-learn-more {
+        @include font(1.1rem, 700);
+      }
+    }
+    &__list {
+      @include flex($direction: column, $flex: 2 0 auto);
+      flex-wrap: wrap;
+      max-height: 50rem;
+      margin: 0.5rem 0 0 0.5rem;
+    }
+  }
+  @include breakpoint($desktop-sm-min) {
+    &__content {
+      padding: 4.5rem 4.1rem 2.4rem;
+    }
+    &__text {
+      max-width: 29rem;
+      margin: 1.1rem 3.6rem 0 0;
+      &-rignet {
+        margin-bottom: 0.9rem;
+      }
+      &-heading {
+        letter-spacing: 0.065rem;
+        margin-bottom: 1.2rem;
+      }
+      &-details {
+        letter-spacing: 0.08rem;
+        margin-bottom: 4.5rem;
+      }
+      &-learn-more {
+        @include font(1.2rem, 700);
+      }
+    }
+    &__list {
+      padding-top: 1.4rem;
+      margin: 0;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    &__content {
+      padding: 5.8rem 11.7rem 2.5rem;
+    }
+    &__text {
+      max-width: 38rem;
+      margin: 1.2rem 3.6rem 0 0;
+      &-rignet {
+        margin-bottom: 0.8rem;
+      }
+      &-heading {
+        @include font(3.8rem, 700, 4rem, 0.065rem);
+        margin-bottom: 2rem;
+      }
+      &-details {
+        margin-bottom: 6.3rem;
+        padding-left: 4rem;
+      }
+      &-learn-more {
+        @include font(1.3rem, 700);
+        padding-left: 4rem;
+      }
+      .icon-slanting {
+        &::before {
+          display: block;
+          border: 0.2rem solid $orange;
+        }
+      }
+    }
+    &__list {
+      padding-top: 1.2rem;
+      max-height: 57rem;
+    }
+  }
+}
+.solution {
+  position: relative;
+  min-height: 22rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  &.ocean {
+    background: url($images-path + "ocean.png") center/cover;
+  }
+  &.pipe {
+    background: url($images-path + "pipe.png") center/cover;
+  }
+  &.oilfield {
+    background: url($images-path + "oilfield.png") center / cover;
+  }
+  &.operators {
+    background: url($images-path + "operators.png") center/cover;
+  }
+  &__caption {
+    @include font(1.4rem, 500, 1.8rem, 0.06rem);
+    box-shadow: $shadow-color-23 0 0.5rem 1.5rem;
+    position: absolute;
+    background-color: $solutions-bg-color;
+    top: 2.5rem;
+    left: 0;
+    min-width: 77%;
+    padding: 1.6rem 0.8rem 1.2rem 0.9rem;
+  }
+  @include breakpoint($tablet-min) {
+    min-width: 22rem;
+    min-height: 20.5rem;
+    margin-bottom: 2.3rem;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 2.5rem;
+    }
+    &__caption {
+      @include font(1.3rem, 500, 1.5rem, 0.03rem);
+      top: 2.17rem;
+      min-width: 17.9rem;
+      padding: 1rem;
+    }
+  }
+  @include breakpoint($desktop-sm-min) {
+    min-width: 29rem;
+    margin-bottom: 3.5rem;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 3.5rem;
+    }
+    &__caption {
+      @include font(1rem, 500, 1.3rem, 0.08rem);
+      top: 2.17rem;
+      min-width: 19rem;
+      padding: 0.9rem 1.5rem 0.8rem 1.1rem;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    min-height: 23rem;
+    min-width: 37rem;
+    margin-bottom: 4.8rem;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 5rem;
+    }
+    &__caption {
+      @include font(1.4rem, 500, 1.6rem, 0.04rem);
+      top: 3rem;
+      min-width: 24.7rem;
+      padding: 1.2rem 1.5rem 1.3rem 1.5rem;
+    }
+  }
+}

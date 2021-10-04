@@ -1,5 +1,5 @@
 .shadow-at-bottom {
-  box-shadow: 0 0.8rem 0.6rem -0.6rem $shadow-color;
+  box-shadow: 0 0.8rem 0.6rem -0.6rem $shadow-color-12;
 }
 .ellipsis {
   overflow: hidden;
@@ -9,4 +9,7 @@
 .disable-scroll {
   height: 100%;
   overflow: hidden;
+}
+.block-text {
+  display: block;
 }
