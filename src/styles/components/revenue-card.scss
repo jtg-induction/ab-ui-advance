@@ -1,0 +1,93 @@
+.revenue {
+  &__card {
+    max-width: 34.4rem;
+    margin-top: 2.8rem;
+  }
+  &__card-icon {
+    color: $orange;
+    @include font(3rem);
+  }
+  &__card-heading {
+    @include line-clamp(2);
+    max-width: 14rem;
+    margin-top: 0.9rem;
+  }
+  &__card-details {
+    max-width: 27rem;
+    margin-top: 0.8rem;
+  }
+  @include breakpoint($phone-mid) {
+    &__card-details {
+      max-width: 100%;
+    }
+  }
+  @include breakpoint($tablet-min) {
+    &__card {
+      max-width: 21.6rem;
+      margin: 0.3rem 0 3rem;
+      &:nth-child(n + 4) {
+        margin: 0.3rem 0 5rem 3rem;
+      }
+      &:nth-child(3),
+      &:nth-child(6) {
+        margin-bottom: 0;
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__card-heading {
+      max-width: 16rem;
+      margin-top: 0;
+    }
+    &__card-details {
+      max-height: 12rem;
+      overflow: hidden;
+    }
+    &__card-icon {
+      @include font(3.5rem);
+    }
+  }
+  @include breakpoint($desktop-sm-min) {
+    &__card {
+      max-width: 29.1rem;
+      &:nth-child(n + 4) {
+        margin: 0.3rem 0 4.5rem 3.3rem;
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__card-heading {
+      max-width: 16rem;
+    }
+    &__card-details {
+      max-width: 29.1rem;
+      margin-top: 0.9rem;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    &__card {
+      max-width: 37rem;
+      margin-bottom: 4.5rem;
+      &:nth-child(n + 4) {
+        margin: 0.3rem 0 6.5rem 4.7rem;
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        margin-bottom: 4.5rem;
+      }
+    }
+    &__card-icon {
+      @include font(4rem);
+    }
+    &__card-heading {
+      max-width: 19rem;
+    }
+    &__card-details {
+      max-width: 37rem;
+    }
+  }
+}

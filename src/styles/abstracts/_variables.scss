@@ -10,19 +10,26 @@ $desktop-lg-max: 1800px;
 
 $grey: #65666b;
 $white: #fff;
+$white-preset-2: #f2f2f2;
 $black: #000;
 
 // backgrounds and shadows
-$shadow-color: rgba(0, 0, 0, 0.129);
-$question-card-shadow-color: rgba(0, 0, 0, 0.22);
+$shadow-color-12: rgba(0, 0, 0, 0.129);
+$shadow-color-22: rgba(0, 0, 0, 0.22);
+$shadow-color-23: rgba(0, 0, 0, 0.231);
 $border-color: #bcbcbc;
 $navmenu-bg-color: #f8f8f8;
+$solutions-bg-color: #f8f8f8;
+//essentials
 $orange: #ef7622;
 $light-orange: #f8ae47;
 
 // linear grandient colors
 $dark-overlay: rgba(0, 0, 0, 0.8);
+$dark-overlay-2: rgba(0, 0, 0, 0.3);
 $light-overlay: rgba(255, 255, 255, 0);
+$revenue-grad-1: #030f21;
+$revenue-grad-2: #40465c;
 
 //absolute images folder path
 $images-path: "/src/assets/images/";
@@ -30,3 +37,9 @@ $images-path: "/src/assets/images/";
 //font families
 $font-roboto: "Roboto";
 $font-halvetica: "Halvetica Neue";
+
+// average view ports
+$phone-mid: 352px;
+$tablet-mid: 896px;
+$desktop-sm-mid: 1232px;
+$desktop-lg-mid: 1620px;

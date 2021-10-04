@@ -108,3 +108,15 @@ h3 {
     @include font(2rem, 700, $height: 2.4rem);
   }
 }
+h4 {
+  @include font(1.6rem, $wt: 700, $height: 1.8rem);
+  @include breakpoint($tablet-min) {
+    @include font(1.8rem, $wt: 700, $height: 2.1rem);
+  }
+  @include breakpoint($desktop-sm-min) {
+    @include font(2rem, $wt: 700, $height: 2.3rem);
+  }
+  @include breakpoint($desktop-lg-min) {
+    @include font(2.4rem, $wt: 700, $height: 2.8rem);
+  }
+}

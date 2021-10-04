@@ -1,0 +1,83 @@
+.consultation {
+  background: linear-gradient(90deg, $dark-overlay 0%, $light-overlay 95%),
+    url($images-path + "pixel--world.png") no-repeat center/cover;
+  color: $white;
+  padding: 4.4rem 0rem 3.8rem;
+
+  &__text {
+    padding-left: 2.1rem;
+  }
+
+  &__title {
+    @include line-clamp(2);
+    max-width: 24rem;
+  }
+  &__details {
+    @include line-clamp(3);
+    margin-top: 0.7rem;
+  }
+  &__consult {
+    @include flex(flex-start, center);
+    margin-top: 1.8rem;
+    color: $white;
+  }
+  &__angle-right {
+    @include font(2.1rem);
+    padding-top: 0.3rem;
+    margin-left: 0.5rem;
+  }
+
+  @include breakpoint($tablet-min) {
+    padding: 4.8rem 0;
+    max-height: 27.3rem;
+    &__text {
+      padding-left: 3rem;
+    }
+    &__title {
+      max-width: 34.8rem;
+      letter-spacing: 0.05rem;
+    }
+    &__details {
+      margin-top: 1.1rem;
+      max-width: 34.5rem;
+    }
+    &__consult {
+      margin-top: 2.5rem;
+    }
+  }
+  @include breakpoint($desktop-sm-min) {
+    padding: 6rem 0;
+    max-height: 32.3rem;
+    &__text {
+      padding-left: 4.1rem;
+    }
+    &__title {
+      max-width: 45.4rem;
+    }
+    &__details {
+      margin-top: 1rem;
+      max-width: 34.8rem;
+    }
+    &__consult {
+      margin-top: 3.4rem;
+    }
+  }
+  @include breakpoint($desktop-lg-min) {
+    padding: 7rem 0;
+    max-height: 35.4rem;
+    &__text {
+      padding-left: 11.7rem;
+    }
+    &__title {
+      max-width: 60rem;
+    }
+    &__details {
+      font-size: 1.8rem;
+      margin-top: 1.2rem;
+      max-width: 34.8rem;
+    }
+    &__consult {
+      margin-top: 2.9rem;
+    }
+  }
+}
