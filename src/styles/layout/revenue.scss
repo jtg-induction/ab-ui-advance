@@ -1,20 +1,21 @@
 .revenue {
-  box-shadow: 0 0.5rem 1.6rem 0 $dark-overlay-2;
   background: linear-gradient(
       to right,
       $revenue-grad-1 100%,
       $revenue-grad-2 100%
     )
     no-repeat top/100%;
+  box-shadow: 0 0 1rem 0.5rem $dark-overlay-2;
+  position: relative;
+  z-index: 2;
+
   &__content {
     @include flex($align-items: flex-start, $direction: column);
     color: $white;
     padding: 4.4rem 2rem 5rem;
   }
   &__heading {
-    &-title {
-      max-width: 27rem;
-    }
+    max-width: 27rem;
     &-details {
       @include line-clamp(4);
       margin: 1rem 0 0;
@@ -41,14 +42,12 @@
   @include breakpoint($tablet-min) {
     &__content {
       @include flex($direction: row);
-      padding: 0 3rem;
+      padding: 5rem 3rem 5.1rem;
     }
     &__heading {
       max-width: 21.6rem;
-      padding-top: 5rem;
       &-details {
         @include line-clamp(7);
-        max-width: 21.4rem;
         margin-top: 1.5rem;
       }
       &-learn-more {
@@ -56,23 +55,19 @@
       }
     }
     &__body {
-      flex: 2 0 auto;
+      @include flex(flex-end, stretch, row, 2 0 auto);
       flex-wrap: wrap;
-      max-height: 75rem;
-      margin: 5rem 3rem;
+      max-width: 49.2rem;
     }
   }
   @include breakpoint($desktop-sm-min) {
     &__content {
-      @include flex($direction: row);
-      padding: 0 4.1rem;
+      padding: 6.5rem 4.1rem 5.8rem;
     }
     &__heading {
       max-width: 29.1rem;
-      padding-top: 6.5rem;
       &-details {
         @include line-clamp(7);
-        max-width: 29.1rem;
         margin-top: 2.1rem;
       }
       &-learn-more {
@@ -85,24 +80,17 @@
       }
     }
     &__body {
-      margin: 6rem 3.6rem 1.2rem;
-      max-height: 69.1rem;
+      max-width: 65.9rem;
     }
   }
   @include breakpoint($desktop-lg-min) {
     &__content {
-      @include flex($direction: row);
-      padding: 0 11.9rem;
+      padding: 7.5rem 11.9rem 7.1rem;
     }
     &__heading {
       max-width: 37rem;
-      padding-top: 7.5rem;
-      &-title {
-        max-width: 31rem;
-      }
       &-details {
         @include line-clamp(7);
-        max-width: 37rem;
         margin-top: 2.6rem;
         padding-left: 3.6rem;
       }
@@ -116,8 +104,7 @@
       }
     }
     &__body {
-      margin: 7.5rem 4.6rem 0.7rem;
-      max-height: 73.9rem;
+      max-width: 90.5rem;
     }
   }
 }

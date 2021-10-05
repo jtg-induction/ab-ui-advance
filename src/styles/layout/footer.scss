@@ -47,9 +47,15 @@
   &__anchor {
     &-logo {
       color: $white;
+      &:hover {
+        color: $black;
+      }
     }
     &-text {
       color: $black;
+      &:hover {
+        color: $white;
+      }
     }
   }
 

@@ -92,3 +92,11 @@
     transform: skew(155deg);
   }
 }
+.icon-blank {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: $white;
+  margin-bottom: 0.7rem;
+}

@@ -143,7 +143,7 @@
   }
   &__caption {
     @include font(1.4rem, 500, 1.8rem, 0.06rem);
-    box-shadow: $shadow-color-23 0 0.5rem 1.5rem;
+    box-shadow: 0.8rem 0.8rem 0.9rem $shadow-color-17;
     position: absolute;
     background-color: $solutions-bg-color;
     top: 2.5rem;
